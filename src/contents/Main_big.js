@@ -1,50 +1,33 @@
-import React, { use, useState } from 'react'
+import React, { useState } from 'react';
 
 const Main_big = () => {
-    const [active,setactive]=useState(false);
-    const [btn,setbtn]=useState(false);
+  // Use a state variable to track the active button
+  const [activeButton, setActiveButton] = useState('post');
+
+  // This function sets the state to the ID of the clicked button
+  const handleButtonClick = (buttonId) => {
+    setActiveButton(buttonId);
+  };
+
   return (
-    <div>
-    <div style={{height:'300px',width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
-        <p style={{fontSize:'50px'}}>Share your thoughts anonymously,safely,and freely</p>
+    <div className="main-content">
+      <h1 className="main-title">Share your thoughts anonymously, safely, and freely</h1>
+      <div className="main-buttons">
+        <button
+          className={`main-btn ${activeButton === 'post' ? 'active-btn' : ''}`}
+          onClick={() => handleButtonClick('post')}
+        >
+          Post a Whisper
+        </button>
+        <button
+          className={`main-btn explore-btn ${activeButton === 'explore' ? 'active-btn' : ''}`}
+          onClick={() => handleButtonClick('explore')}
+        >
+          Explore Whispers
+        </button>
+      </div>
     </div>
-    <div style={{display:'flex', justifyContent:'center',alignItems:'center'}}>
-        <div>
-            <button
-      style={{
-        height:'30px',
-        borderRadius: "10px",
-        border: "none",
-        backgroundColor: "lightblue",
-        color: "white",
-        fontSize: "16px",
-        cursor: "pointer",
-      }}
-      onMouseEnter={(e) => (e.target.style.backgroundColor = "dodgerblue")}
-      onMouseLeave={(e) => (e.target.style.backgroundColor = "lightblue")}
-    >
-      Post a Whisper
-    </button>
-    <button
-      style={{
-        height:'30px',
-        marginLeft:'30px',
-        borderRadius: "10px",
-        border: "none",
-        backgroundColor: "lightblue",
-        color: "white",
-        fontSize: "16px",
-        cursor: "pointer",
-      }}
-      onMouseEnter={(e) => (e.target.style.backgroundColor = "dodgerblue")}
-      onMouseLeave={(e) => (e.target.style.backgroundColor = "lightblue")}
-    >
-      Explore Whispers
-    </button>
-        </div>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
 export default Main_big;

@@ -1,0 +1,72 @@
+/* src/contents/InfoBox.css */
+.infobox-container {
+  height: 250px;
+  width: 250px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px;
+  background: linear-gradient(145deg, #1e293b, #151e29);
+  border-radius: 12px;
+  box-shadow: 
+    -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.infobox-container:hover {
+  transform: translateY(-5px) rotateX(2deg) scale(1.02);
+}
+
+.infobox-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.infobox-container form p {
+  color: #E2E8F0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.infobox-container input,
+.infobox-container textarea {
+  background: #2D3748;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  color: #E2E8F0;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.infobox-container input::placeholder,
+.infobox-container textarea::placeholder {
+  color: #94A3B8;
+}
+
+.infobox-container button[type="submit"] {
+  background-color: #3B82F6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.infobox-container button[type="submit"]:hover {
+  background-color: #2563EB;
+  transform: translateY(-2px);
+}
+.submit{
+    
+}
+.submit:hover{
+    background-color: #2563EB;
+  transform: translateY(-2px);
+}

@@ -13,6 +13,7 @@
     5px 5px 10px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 .infobox-container:hover {

@@ -1,7 +1,11 @@
 /* src/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto , Arial;
+  letter-spacing: 1.5px;
   background-color: #121A26;
   color: #E2E8F0;
 }
@@ -19,6 +23,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #E2E8F0;
+  cursor: pointer;
 }
 
 .navbar-links {
@@ -34,7 +39,7 @@ body {
 }
 
 .navbar-link:hover {
-  color: #E2E8F0;
+  color: #E2E8F0; 
 }
 
 .navbar-auth {
@@ -63,25 +68,25 @@ body {
 }
 
 .main-title {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 40px;
+  /* font-weight: bold; */
   line-height: 1.2;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: white;
 }
 
 .main-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* Updated styles to match your previous buttons */
 .main-btn {
-  height: 30px;
-  border-radius: 10px;
+  height: 40px;
+  border-radius: 5px;
   border: none;
-  background-color: lightblue;
+  background-color: rgb(161, 161, 161);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -90,7 +95,6 @@ body {
 
 .main-btn:hover {
   transform: translateY(-2px);
-
 }
 
 /* The active state for both buttons */
@@ -106,4 +110,5 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  /* z-index: 0; */
 }

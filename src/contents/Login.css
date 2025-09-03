@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Main page container */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #34495e, #1c2833);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating background circles */
+.login-wrapper::before, .login-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(60px);
+}
+
+.login-wrapper::before {
+  width: 280px;
+  height: 280px;
+  top: 15%;
+  left: 25%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.login-wrapper::after {
+  width: 380px;
+  height: 380px;
+  bottom: 15%;
+  right: 25%;
+  transform: translateX(50%) translateY(50%);
+}
+
+/* Glassmorphic login card */
+.login-card {
+  position: relative;
+  width: 420px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1;
+}
+
+.login-card h2 {
+  font-size: 2.2em;
+  color: #ecf0f1;
+  margin-bottom: 35px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Input field and label grouping */
+.form-group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 18px 12px 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ecf0f1;
+  color: #ecf0f1;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgba(236, 240, 241, 0.8);
+  font-size: 1.1em;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+  top: -22px;
+  left: 0;
+  color: #3498db;
+  font-size: 0.9em;
+}
+
+/* Forgot password link */
+.recovery-link {
+  display: block;
+  text-align: right;
+  color: rgba(236, 240, 241, 0.7);
+  text-decoration: none;
+  font-size: 0.95em;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+.recovery-link:hover {
+  color: #3498db;
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 18px;
+  background: #3498db;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.login-button:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
